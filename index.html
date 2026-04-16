@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROINOV | Engineering Innovation</title>
+    <meta
+      name="description"
+      content="PROINOV desenvolve experiências digitais com rigor técnico, direção visual e soluções sob medida."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Space+Grotesk:wght@300;400;500;700&family=Manrope:wght@300;400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#454747",
+              "on-tertiary": "#161c22",
+              surface: "#131313",
+              "on-primary-fixed": "#ffffff",
+              "on-primary-container": "#000000",
+              "surface-dim": "#131313",
+              "on-error": "#690005",
+              "on-tertiary-container": "#000000",
+              "outline-variant": "#474747",
+              "on-secondary-fixed-variant": "#2e3c4e",
+              background: "#131313",
+              "tertiary-fixed": "#595f66",
+              "on-secondary-fixed": "#0d1c2d",
+              "surface-container-highest": "#353534",
+              "primary-fixed": "#5d5f5f",
+              "error-container": "#93000a",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-container": "#d4e4fa",
+              "surface-variant": "#353534",
+              "on-tertiary-fixed": "#ffffff",
+              "surface-container-lowest": "#0e0e0e",
+              "inverse-on-surface": "#313030",
+              "secondary-fixed-dim": "#9dacc2",
+              primary: "#ffffff",
+              tertiary: "#dde3eb",
+              "primary-container": "#d4d4d4",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "on-background": "#e5e2e1",
+              "surface-tint": "#c6c6c7",
+              "surface-container": "#201f1f",
+              "tertiary-fixed-dim": "#41474e",
+              "on-primary": "#1a1c1c",
+              "on-surface-variant": "#c6c6c6",
+              "tertiary-container": "#8b9199",
+              "on-surface": "#e5e2e1",
+              "on-secondary": "#0d1c2d",
+              secondary: "#b9c8de",
+              "inverse-surface": "#e5e2e1",
+              "inverse-primary": "#5d5f5f",
+              outline: "#919191",
+              "surface-bright": "#393939",
+              error: "#ffb4ab",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#dde3eb",
+              "secondary-container": "#39485a",
+              "surface-container-low": "#1c1b1b",
+              "secondary-fixed": "#b9c8de"
+            },
+            fontFamily: {
+              headline: ["Noto Serif", "serif"],
+              body: ["Manrope", "sans-serif"],
+              label: ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px"
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-10px)" }
+              }
+            },
+            animation: {
+              float: "float 5s ease-in-out infinite"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+    <div class="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_40%)]"></div>
+
+    <header class="fixed top-0 left-0 z-50 w-full">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 backdrop-blur-md md:px-10">
+        <a href="#home" class="font-headline text-2xl font-bold uppercase tracking-tight text-white">PROINOV</a>
+
+        <div class="hidden items-center gap-12 md:flex">
+          <a class="nav-link is-active" href="#studio">Studio</a>
+          <a class="nav-link" href="#archive">Archive</a>
+          <a class="nav-link" href="#inquiries">Inquiries</a>
+        </div>
+
+        <button
+          id="menu-toggle"
+          class="material-symbols-outlined text-white md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menu"
+        >
+          menu
+        </button>
+      </nav>
+
+      <div
+        id="mobile-menu"
+        class="mx-4 hidden border border-white/10 bg-black/80 p-6 backdrop-blur-xl md:hidden"
+      >
+        <div class="flex flex-col gap-4">
+          <a class="mobile-link" href="#studio">Studio</a>
+          <a class="mobile-link" href="#archive">Archive</a>
+          <a class="mobile-link" href="#inquiries">Inquiries</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="relative flex min-h-screen flex-col justify-center overflow-hidden px-6 pt-24 md:px-10">
+        <div class="absolute right-[-10%] top-24 h-72 w-72 rounded-full border border-white/10 blur-3xl md:h-96 md:w-96"></div>
+
+        <div class="relative z-10 mx-auto w-full max-w-7xl">
+          <p class="mb-8 font-label text-[10px] uppercase tracking-[0.5em] text-primary-fixed">
+            Architectural Rigor / Digital Space
+          </p>
+          <div class="grid items-end gap-12 lg:grid-cols-[1.3fr_0.7fr]">
+            <div>
+              <h1 class="silver-gradient font-headline text-[clamp(2.8rem,8vw,6.5rem)] font-bold uppercase leading-[0.92] tracking-tighter">
+                PROINOV:<br />
+                ENGINEERING<br />
+                INNOVATION
+              </h1>
+            </div>
+            <div class="space-y-8 border-l border-white/10 pl-0 lg:pl-10">
+              <p class="max-w-md text-base leading-relaxed text-on-surface-variant md:text-lg">
+                Estruturamos produtos, sites e plataformas com direção técnica, performance e identidade visual forte.
+              </p>
+              <a
+                href="#inquiries"
+                class="inline-flex items-center border border-white px-6 py-4 font-label text-xs uppercase tracking-[0.25em] text-white transition hover:bg-white hover:text-black"
+              >
+                Start Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-8 left-6 flex flex-col items-start gap-4 md:bottom-12 md:left-10">
+          <div class="relative h-24 w-px overflow-hidden bg-outline-variant/30">
+            <div class="absolute left-0 top-0 h-1/2 w-full animate-pulse bg-white"></div>
+          </div>
+          <span class="font-label text-[10px] uppercase tracking-widest text-primary-fixed [writing-mode:vertical-lr]">
+            Scroll to explore
+          </span>
+        </div>
+      </section>
+
+      <section id="studio" class="bg-surface-container-low px-6 py-24 md:px-10 md:py-40">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-12">
+          <div class="reveal md:col-start-2 md:col-span-4">
+            <p class="mb-4 font-label text-[10px] uppercase tracking-[0.4em] text-primary-fixed-dim">Studio</p>
+            <h2 class="silver-gradient mb-8 font-headline text-3xl md:text-4xl">The Monolith Methodology</h2>
+            <p class="text-lg leading-relaxed text-on-surface-variant">
+              Tratamos o espaço digital como arquitetura aplicada. Cada interface é desenhada com clareza estrutural, contraste e intenção.
+            </p>
+          </div>
+
+          <div class="reveal md:col-start-8 md:col-span-4 md:mt-20">
+            <div class="group flex flex-col gap-6 bg-surface-container-highest p-10">
+              <span class="font-label text-xs uppercase tracking-widest text-primary">Innovation Metric</span>
+              <span class="silver-gradient font-headline text-6xl font-bold md:text-7xl">142+</span>
+              <p class="font-label text-xs uppercase leading-tight tracking-tighter text-on-surface-variant">
+                Soluções técnicas entregues para produtos, operações e experiências digitais em múltiplos segmentos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="archive" class="bg-surface px-6 py-24 md:px-10 md:py-52">
+        <div class="mx-auto max-w-7xl">
+          <h3 class="mb-16 text-center font-label text-xs uppercase tracking-[0.4em] text-primary-fixed-dim md:mb-24">
+            Selected Works
+          </h3>
+
+          <div class="flex flex-col gap-7 md:gap-10">
+            <a
+              class="project-link group"
+              href="https://www.matamata.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">01</span>
+              <h4 class="project-title">Mata-Mata</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://plannerdoc.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">02</span>
+              <h4 class="project-title">PlannerDoc</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://www.estrelabet.bet.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">03</span>
+              <h4 class="project-title">EstrelaBet</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://www.sorteonline.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">04</span>
+              <h4 class="project-title">Sorte Online</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://www.panrotas.com.br/mercado/tecnologia/2022/01/cvc-corp-compra-empresa-de-tecnologia-nos-estados-unidos_187135.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">05</span>
+              <h4 class="project-title">WeTrek</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://universo.magalu.com/?partner_source=googlepmax&utm_source=google&utm_medium=pmax&utm_campaign=pmax_pj&utm_content=marca_pj&gad_source=1&gad_campaignid=23037159753&gbraid=0AAAAADwiAobfpPZeSgBsp-Gkwds1QqPNk&gclid=Cj0KCQjwp7jOBhDGARIsABe7C4cOmG3SlpwBXjP-ffP2Z-yxRBiKMnX_SsVLvCKLc8864eo6BbDoP9gaAvxbEALw_wcB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">06</span>
+              <h4 class="project-title">Magalu</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://medicalbox.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">07</span>
+              <h4 class="project-title">MedicalBox</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://www.vistajet.com/en/news/vistajet-mobile-app-takes-off/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">08</span>
+              <h4 class="project-title">VistaJet</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://mercury.multilaser.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">09</span>
+              <h4 class="project-title">Multilaser</h4>
+            </a>
+            <a
+              class="project-link group"
+              href="https://www.compra-agora.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="project-index">10</span>
+              <h4 class="project-title">Compra Agora</h4>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative h-[85vh] min-h-[640px] w-full overflow-hidden">
+        <div
+          class="absolute inset-0 bg-cover bg-center grayscale opacity-40 mix-blend-screen"
+          style="background-image: url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface"></div>
+
+        <div class="relative mx-auto flex h-full max-w-7xl items-center px-6 md:px-10">
+          <div class="reveal max-w-2xl border-l border-white/20 py-12 pl-8 md:pl-12">
+            <p class="mb-6 font-label text-xs uppercase tracking-widest text-primary-container">Our Philosophy</p>
+            <h3 class="mb-8 font-headline text-4xl leading-tight md:text-5xl">
+              Elegance is the absence of noise.
+            </h3>
+            <a
+              href="#inquiries"
+              class="inline-flex bg-primary px-8 py-4 font-headline text-xs font-bold uppercase tracking-[0.2em] text-on-primary transition-colors duration-300 hover:bg-primary-fixed-dim hover:text-white"
+            >
+              Start Project
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="inquiries" class="bg-[#101010] px-6 py-24 md:px-10">
+        <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1fr_1.2fr]">
+          <div class="reveal">
+            <p class="mb-4 font-label text-[10px] uppercase tracking-[0.45em] text-primary-fixed-dim">Inquiries</p>
+            <h3 class="mb-6 font-headline text-4xl text-white md:text-5xl">Vamos construir algo sólido.</h3>
+            <p class="max-w-md text-base leading-relaxed text-on-surface-variant">
+              Estrutura de site, landing page, plataforma ou produto digital. A base está pronta para você adaptar com conteúdo real, portfólio e contato.
+            </p>
+            <div class="mt-8 flex flex-col gap-3">
+              <p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary-fixed-dim">Perfil Profissional</p>
+              <a
+                class="footer-link w-fit"
+                href="https://www.linkedin.com/in/brunogprates"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn / brunogprates
+              </a>
+            </div>
+          </div>
+
+          <form class="reveal grid gap-6">
+            <div class="grid gap-6 md:grid-cols-2">
+              <label class="form-field">
+                <span>Nome</span>
+                <input type="text" placeholder="Seu nome" />
+              </label>
+              <label class="form-field">
+                <span>E-mail</span>
+                <input type="email" placeholder="voce@empresa.com" />
+              </label>
+            </div>
+            <label class="form-field">
+              <span>Empresa</span>
+              <input type="text" placeholder="Nome da empresa" />
+            </label>
+            <label class="form-field">
+              <span>Projeto</span>
+              <textarea rows="5" placeholder="Descreva brevemente o que você precisa."></textarea>
+            </label>
+            <button
+              type="submit"
+              class="w-fit border border-white px-8 py-4 font-label text-xs uppercase tracking-[0.25em] text-white transition hover:bg-white hover:text-black"
+            >
+              Enviar briefing
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full bg-[#131313] px-6 py-16 md:px-10 md:py-20">
+      <div class="mx-auto flex max-w-7xl flex-col gap-10 md:flex-row md:items-end md:justify-between">
+          <div class="flex flex-col gap-8">
+          <span class="font-headline text-2xl font-bold uppercase tracking-tighter text-white">PROINOV</span>
+          <div class="flex flex-col gap-2">
+            <p class="font-label text-[10px] uppercase tracking-widest text-white">+55 16 98816-2089</p>
+            <p class="font-label text-[10px] uppercase tracking-widest text-neutral-500">studio@proinov.com</p>
+            <a
+              class="footer-link"
+              href="https://www.linkedin.com/in/brunogprates"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 md:items-end">
+          <div class="flex flex-wrap gap-6 md:gap-12">
+            <a class="footer-link" href="#inquiries">Inquiries</a>
+            <a class="footer-link" href="#studio">Studio</a>
+            <a class="footer-link" href="#archive">Archive</a>
+            <a class="footer-link" href="#home">Top</a>
+          </div>
+          <p class="font-label text-[10px] uppercase tracking-widest text-neutral-500">
+            © 2026 PROINOV. ARCHITECTURAL RIGOR IN DIGITAL SPACE.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
