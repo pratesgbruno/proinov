@@ -1006,10 +1006,13 @@
                 nova empresa de tecnologia.
               </p>
 
-              <p class="font-body text-gray-400 text-xs leading-relaxed">
-                <strong>Risco vs Recompensa:</strong> Quanto menor o pró-labore fixo assumido pelo desenvolvedor, mais recurso "sobra" no <strong>Caixa Operacional</strong> da nova empresa para cobrir outras despesas essenciais (contador, serviços, marketing, time de vendas). Ao preservar esse caixa operacional para a startup, o desenvolvedor assume um risco maior junto ao investidor, o que justifica sua fatia maior de Equity (com Vesting de 24 meses).
-                <br /><br />
-                <span class="text-cyan font-bold">Matemática do Aporte:</span> O aporte total de $450k USD equivale a aprox. <strong>R$ 2.47 Milhões</strong> (Câmbio 5,50). O Caixa Operacional é calculado subtraindo o custo total do desenvolvedor (Pró-labore 24x) deste aporte inicial.
+              <p class="font-body text-gray-400 text-xs leading-relaxed" id="dynamic-scenario-explanation">
+                <span class="text-cyan font-bold">Cenário Selecionado: Skin in the Game</span><br />
+                Neste cenário, assumimos o maior risco possível para proteger o caixa da nova empresa. Com um pró-labore de apenas R$ 35k mensais, garantimos que <strong>R$ 1.63 Milhão</strong> fique livre no Caixa Operacional da startup. Esse recurso abundante permite uma agressiva contratação de time comercial, forte investimento em marketing e blindagem jurídica. Por assumir esse "sacrifício" e garantir a saúde financeira do negócio logo no dia 1, justificamos uma participação societária de <strong>50%</strong>.
+              </p>
+              
+              <p class="font-body text-gray-500 text-[10px] leading-relaxed mt-4 border-t border-white/10 pt-4">
+                <strong>Matemática Base:</strong> O aporte de $450k USD equivale a aprox. R$ 2.47 Milhões (Câmbio 5,50). O Caixa Operacional é calculado subtraindo o Custo Dev Total (Pró-labore 24x) deste aporte inicial. O valor que sobra é dedicado à estrutura da nova startup (contador, marketing, mão de obra, etc).
               </p>
             </div>
           </div>
@@ -1174,15 +1177,20 @@
       // Labels: ['Investimento', 'ROI', 'Exclusividade', 'Setup Rápido', 'Customização']
       let newData = [];
       let newLabel = '';
+      const explanationText = document.getElementById('dynamic-scenario-explanation');
+
       if (type === 'A') {
         newData = [80, 60, 70, 70, 80];
         newLabel = 'M3: Spin-off (Skin in the Game)';
+        if(explanationText) explanationText.innerHTML = `<span class="text-cyan font-bold">Cenário Selecionado: Skin in the Game</span><br />Neste cenário, assumimos o maior risco possível para proteger o caixa da nova empresa. Com um pró-labore de apenas R$ 35k mensais, garantimos que <strong>R$ 1.63 Milhão</strong> fique livre no Caixa Operacional da startup. Esse recurso abundante permite uma agressiva contratação de time comercial, forte investimento em marketing e blindagem jurídica. Por assumir esse "sacrifício" e garantir a saúde financeira do negócio logo no dia 1, justificamos uma participação societária de <strong>50%</strong>.`;
       } else if (type === 'B') {
         newData = [90, 80, 70, 80, 90];
         newLabel = 'M3: Spin-off (Equilibrado)';
+        if(explanationText) explanationText.innerHTML = `<span class="text-cyan font-bold">Cenário Selecionado: Equilibrado</span><br />Neste cenário, dividimos o risco de forma mais nivelada. Com um pró-labore de R$ 50k mensais, a operação fica mais confortável para o desenvolvimento desde o início, mas ainda preserva um Caixa Operacional excelente de <strong>R$ 1.27 Milhão</strong> para a nova empresa. Esse montante é perfeitamente adequado para estruturar um time de vendas enxuto, contabilidade e as primeiras incursões de marketing nacional. A participação societária reflete esse balanço, fixando-se em <strong>35%</strong>.`;
       } else if (type === 'C') {
         newData = [100, 100, 80, 90, 100];
         newLabel = 'M3: Spin-off (Executivo)';
+        if(explanationText) explanationText.innerHTML = `<span class="text-cyan font-bold">Cenário Selecionado: Executivo</span><br />Neste cenário, operamos num modelo tradicional de prestação de serviços executivos sem risco pessoal. O pró-labore de R$ 65k mensais garante nossa estabilidade financeira total no curto prazo. Como contrapartida, a empresa consome seu recurso mais cedo, restando um Caixa Operacional de <strong>R$ 915 mil</strong> para suportar contratações de marketing, vendedores e contador, exigindo mais eficiência da equipe comercial. Por estarmos com risco baixo, a participação societária cai para <strong>20%</strong>.`;
       }
 
       // Update the chart if we are highlighting M3
