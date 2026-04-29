@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Radius — Precision Refined | PROINOV</title>
+  <title>Edify 3D — Gestão de obra | TECNOLOGIA</title>
   <meta name="description"
-    content="Radius é a plataforma de Digital Twin para construção civil que eleva o padrão de venda, gestão e experiência do cliente imobiliário." />
+    content="Radius é a plataforma inteligente de gestão de obras para a construção civil, que eleva o padrão da informação por meio de inteligência artificial e da experiência do cliente imobiliário." />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -139,7 +139,7 @@
     .coord-badge {
       position: absolute;
       font-family: 'Roboto Mono', monospace;
-      font-size: 10px;
+      font-size: 20px;
       color: rgba(255, 255, 255, 0.4);
       letter-spacing: 0.1em;
     }
@@ -148,6 +148,7 @@
     .text-glow-gold {
       text-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
     }
+
     .stroke-text {
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
     }
@@ -183,9 +184,9 @@
   <!-- Nav -->
   <nav class="fixed top-0 w-full z-50 glass-panel border-x-0 border-t-0">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="flex flex-col gap-1">
-        <span class="font-headline font-black tracking-[0.3em] text-sm uppercase text-white">PROINOV</span>
-        <span class="font-tech text-[9px] tracking-widest text-gold opacity-80 uppercase">Radius</span>
+      <a href="/" class="flex items-center">
+        <img src="/radius/Digital_Twin_Journey/logo.png" alt="Proinov Radius"
+          class="h-10 md:h-14 w-auto opacity-90 hover:opacity-100 transition-opacity drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" />
       </a>
       <div class="hidden md:flex gap-8 items-center">
         <a href="#conceito"
@@ -211,7 +212,7 @@
 
       <span
         class="font-tech text-[11px] tracking-[0.3em] text-gold border border-gold/30 px-4 py-1.5 rounded-full mb-8 animate-fade-up">
-        DIGITAL TWIN · PRECISION REFINED
+        ConstruTECH · INVESTIMENTO STARTUP
       </span>
 
       <h1
@@ -225,8 +226,9 @@
 
       <p class="font-body text-gray-400 max-w-2xl text-sm md:text-base leading-relaxed mb-10 animate-fade-up"
         style="animation-delay: 200ms;">
-        Cada obra é uma pedra sendo lapidada até atingir seu valor máximo. Conheça a plataforma de "Digital Twin" que
-        eleva o padrão de construção, venda e experiência do cliente.
+        Você ainda sofre com a gestão da obra em andamento, equipes, reports, dados e previsibilidade? Usa o Prevision,
+        InMeta e equipe de engenharia, mas não consegue dar visibilidade para o cliente final? O Radius é a ponte entre
+        o canteiro e o encantamento.
       </p>
 
       <a href="https://dashboard-bruno-prates.vercel.app/index.html"
@@ -239,8 +241,50 @@
     </div>
   </section>
 
+  <!-- Dobra 1.5: A Dor do Cliente -->
+  <section class="relative pt-20 pb-10 bg-[#050505] overflow-hidden flex flex-col items-center border-t border-white/5">
+    <!-- Tech elements -->
+    <div class="coord-badge bottom-4 left-6 text-red-500/40 hidden md:block">SYS: DEPRECATED</div>
+    <div class="coord-badge top-4 right-6 hidden md:block">SYNC: FAILED</div>
+
+    <!-- Grade de fundo sutil -->
+    <div class="arch-grid z-0 opacity-10"></div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center mb-8 relative z-10">
+      <span
+        class="font-tech text-[10px] tracking-widest text-red-500/80 uppercase mb-4 block flex justify-center items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+        O Paradigma Atual
+      </span>
+      <h2 class="font-headline font-black text-3xl md:text-5xl uppercase leading-tight mb-4 text-white">
+        A Ilusão do <span class="text-white/40 line-through">Controle.</span>
+      </h2>
+      <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+        Sistemas isolados, cronogramas estáticos e dados desconectados da realidade física. O mercado atual possui muita
+        informação, mas sofre com a dificuldade de transformá-la em <strong>previsibilidade de longo prazo.</strong>
+      </p>
+    </div>
+
+    <!-- Imagem Cravada (Mask-Image Blend) -->
+    <div class="w-full max-w-6xl mx-auto relative px-4 z-10 mt-4">
+      <!-- O gradient fade da imagem (blur / transparencia em cima e embaixo) -->
+      <div class="relative w-full aspect-video md:aspect-[21/9] flex justify-center"
+        style="-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);">
+
+        <!-- Imagem da dor do cliente enviada -->
+        <img src="/radius/Digital_Twin_Journey/dor-cliente.png" alt="A Dor da Gestão Atual"
+          class="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-500" />
+
+      </div>
+    </div>
+  </section>
+
   <!-- Dobra 2: O Ecossistema Radius -->
   <section id="ecossistema" class="relative py-32 bg-[#050505] border-t border-white/5 overflow-hidden">
+    <!-- Tech elements -->
+    <div class="coord-badge top-8 left-6 hidden md:block">SEC: 01 // ECOSYSTEM</div>
+    <div class="coord-badge bottom-8 right-6 text-white/20 hidden md:block">VAL: MULTIPLIER</div>
+
     <div class="max-w-[1400px] mx-auto px-6 relative z-10">
 
       <!-- Título da Seção -->
@@ -328,6 +372,10 @@
 
   <!-- Dobra 3: Públicos (Bento Grid) -->
   <section id="publicos" class="relative py-32 bg-[#080808]">
+    <!-- Tech elements -->
+    <div class="coord-badge top-8 right-6 hidden md:block">PHASE: 02 // JOURNEY</div>
+    <div class="coord-badge bottom-8 left-6 text-gold/30 hidden md:block">EXP: IMMERSIVE</div>
+
     <div class="max-w-7xl mx-auto px-6">
       <div class="mb-16">
         <span class="font-tech text-[10px] tracking-widest text-cyan uppercase mb-4 block">02 // A Jornada</span>
@@ -403,6 +451,10 @@
 
   <!-- Dobra 4: Inteligência (Engenharia) -->
   <section id="engenharia" class="relative py-32 border-y border-white/5 overflow-hidden">
+    <!-- Tech elements -->
+    <div class="coord-badge bottom-8 left-6 text-cyan/40 hidden md:block">Z-INDEX: +999.00</div>
+    <div class="coord-badge top-8 right-6 hidden md:block">AI_CORE: ACTIVE</div>
+
     <div
       class="absolute inset-0 bg-[url('/radius/Digital_Twin_Journey/bg05.jpg')] bg-cover bg-center opacity-30 mix-blend-luminosity">
     </div>
@@ -413,24 +465,26 @@
       <div class="md:w-1/2">
         <span class="font-tech text-[10px] tracking-widest text-cyan uppercase mb-4 block">03 // Engenharia & IA</span>
         <h2 class="font-headline font-black text-4xl lg:text-5xl uppercase leading-tight mb-6">
-          A Previsibilidade<br />que Protege o <span class="text-gold italic">VGV.</span>
+          A Tecnologia que Multiplica o <span class="text-gold italic">VGV.</span>
         </h2>
         <p class="font-body text-gray-400 text-sm leading-relaxed mb-8">
-          Dashboard minimalista. Uma área opaca da "pedra" é destacada apontando gargalos antecipados pela IA. O Radius
-          analisa, prevê e alerta.
+          Trazer inovação para o canteiro de obras não é apenas sobre controle, é sobre valorização patrimonial. O
+          Radius analisa dados em tempo real, prevê gargalos logísticos e garante um padrão de precisão milimétrica.
+          Essa excelência na engenharia eleva a percepção de luxo e impulsiona diretamente o Valor Geral de Vendas (VGV)
+          do seu empreendimento.
         </p>
 
         <!-- KPI list -->
         <div class="space-y-6">
           <div class="glass-panel p-6 border-l-2 border-l-gold">
-            <h4 class="font-tech text-xs tracking-wider text-white uppercase mb-2">IA Analítica</h4>
-            <p class="font-body text-xs text-gray-500">Avisos antecipados sobre gargalos. A IA aponta o caminho ideal de
-              execução.</p>
+            <h4 class="font-tech text-xs tracking-wider text-white uppercase mb-2">IA Preditiva</h4>
+            <p class="font-body text-xs text-gray-500">Nossa inteligência artificial rastreia o modelo 4D e antecipa
+              gargalos no cronograma, otimizando o caminho crítico antes que o atraso aconteça.</p>
           </div>
           <div class="glass-panel p-6 border-l-2 border-l-cyan">
             <h4 class="font-tech text-xs tracking-wider text-white uppercase mb-2">Health Check (KPIs)</h4>
-            <p class="font-body text-xs text-gray-500">Progresso e saúde representados por uma barra de polimento — do
-              opaco ao brilho total.</p>
+            <p class="font-body text-xs text-gray-500">Indicadores de saúde da obra em tempo real. O progresso físico é
+              validado contra o planejado, convertendo dados complexos em previsibilidade absoluta.</p>
             <div class="mt-4 h-1 bg-white/10 w-full relative">
               <div class="absolute top-0 left-0 h-full bg-cyan w-[82%]"></div>
             </div>
@@ -543,6 +597,92 @@
     </div>
   </section>
 
+  <!-- Dobra 4.5: Big Data -->
+  <section id="bigdata" class="relative py-32 bg-[#030303] border-t border-white/5 overflow-hidden">
+    <!-- Tech elements -->
+    <div class="coord-badge top-12 left-6 hidden md:block">DB: CONNECTED</div>
+    <div class="coord-badge bottom-12 right-6 text-gold/40 hidden md:block">NODE: MASTER</div>
+
+    <!-- Efeitos de Fundo -->
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/5 via-bg to-bg">
+    </div>
+    <div class="arch-grid z-0 opacity-20"></div>
+
+    <div class="max-w-[1400px] mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center gap-16">
+
+      <!-- Lado Esquerdo: Texto -->
+      <div class="lg:w-1/2">
+        <span class="font-tech text-[10px] tracking-widest text-gold uppercase mb-4 flex items-center gap-2">
+          <span class="w-1.5 h-1.5 bg-gold rounded-full animate-pulse shadow-[0_0_8px_rgba(201,168,76,1)]"></span>
+          O Ativo Oculto da Operação
+        </span>
+        <h2 class="font-headline font-black text-4xl lg:text-6xl uppercase leading-tight mb-6">
+          DATA IS THE<br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">NEW
+            GOLD.</span>
+        </h2>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+          Ao conectar diversas construtoras e obras simultâneas no Radius, o verdadeiro ativo gerado vai muito além do
+          software. Nós passamos a reter informações granulares sobre cada metro quadrado em execução no país.
+        </p>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+          Saber exatamente quais fornecedores têm o maior índice de atraso, cruzar o comportamento de materiais em larga
+          escala e prever oscilações financeiras antes do mercado: isso cria um banco de dados inestimável. Um ativo
+          precioso que, processado por Inteligência Artificial, vale milhões para bancos estruturando financiamentos,
+          seguradoras calculando riscos e grandes indústrias otimizando suas cadeias.
+        </p>
+
+        <div class="flex items-center gap-4 text-white/50 border-t border-white/10 pt-6">
+          <span class="material-symbols-outlined text-4xl text-gold">database</span>
+          <div class="font-tech text-[10px] uppercase tracking-widest leading-relaxed">
+            A verdadeira mina de ouro<br />
+            está nos <strong class="text-white">dados gerados.</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado Direito: Visual -->
+      <div class="lg:w-1/2 w-full relative min-h-[400px] flex items-center justify-center">
+        <!-- Elementos de Dados Flutuantes -->
+        <div
+          class="relative w-full max-w-[400px] aspect-square rounded-full border border-gold/10 flex items-center justify-center shadow-[0_0_80px_rgba(201,168,76,0.03)] group">
+          <div
+            class="absolute inset-4 rounded-full border border-dashed border-white/5 animate-[spin_60s_linear_infinite]">
+          </div>
+          <div class="absolute inset-12 rounded-full border border-cyan/5 animate-[spin_40s_linear_infinite_reverse]">
+          </div>
+
+          <div
+            class="glass-panel p-6 bg-black/60 border border-gold/30 rounded-full w-48 h-48 flex flex-col items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-700 shadow-[0_0_40px_rgba(201,168,76,0.15)]">
+            <span class="material-symbols-outlined text-gold text-4xl mb-2">hub</span>
+            <span class="font-headline font-black text-2xl text-white">BIG DATA</span>
+            <span class="font-tech text-[8px] text-gray-400 tracking-widest text-center mt-1">INTELIGÊNCIA<br />DE
+              MERCADO</span>
+          </div>
+
+          <!-- Nodes conectando -->
+          <div
+            class="absolute top-[15%] left-[20%] glass-panel px-3 py-1.5 border border-white/10 text-[9px] font-tech text-gray-300">
+            Bancos</div>
+          <div
+            class="absolute bottom-[20%] right-[10%] glass-panel px-3 py-1.5 border border-white/10 text-[9px] font-tech text-gray-300">
+            Seguradoras</div>
+          <div
+            class="absolute top-[40%] right-[0%] glass-panel px-3 py-1.5 border border-white/10 text-[9px] font-tech text-gray-300">
+            Indústria</div>
+
+          <div
+            class="absolute top-[25%] left-[45%] w-1.5 h-1.5 bg-cyan rounded-full shadow-[0_0_10px_rgba(0,229,255,1)] animate-ping">
+          </div>
+          <div
+            class="absolute bottom-[30%] left-[25%] w-1.5 h-1.5 bg-gold rounded-full shadow-[0_0_10px_rgba(201,168,76,1)] animate-ping"
+            style="animation-delay: 500ms"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Dobra 5: Modelos de Negócio -->
   <section id="investimento" class="relative py-32 bg-invest bg-fixed border-t border-white/5">
     <div class="absolute inset-0 bg-bg/95 backdrop-blur-[5px]"></div>
@@ -641,103 +781,171 @@
 
           <div class="pointer-events-none">
             <p class="font-body text-gray-300 text-sm mb-4 leading-relaxed">
-              <strong>O que é:</strong> Criação de uma nova empresa (CNPJ) onde somos sócios. O lucro real não vem
-              apenas do uso nas suas obras, mas da massificação global da ferramenta. O objetivo é criar valor de
-              mercado (Valuation) para um futuro Exit milionário.
+              <strong>O que é:</strong> Criação de uma nova empresa (CNPJ) de tecnologia independente. Primeiro,
+              implementamos a inovação para dentro de casa, utilizando suas obras como laboratório para resolver
+              gargalos internos. Assim que a tecnologia estiver validada e madura, escalamos a operação: a nova empresa
+              passará a prospectar e prestar esse serviço para outros clientes do mercado, trazendo novas receitas e
+              garantindo o Retorno sobre o Investimento (ROI) do capital inicial.
             </p>
             <div class="bg-cyan/10 p-4 border border-cyan/20 rounded-sm mb-8">
               <p class="font-body text-xs text-cyan italic leading-relaxed">
-                <span class="font-bold not-italic">A Analogia:</span> Em vez de construir um único prédio, estamos
-                fundando uma nova Incorporadora Tecnológica. Você entra com o capital (obras como laboratório), nós
-                entramos com o IP (engenharia/código). O alvo é vender franquias desse modelo para o mundo.
+                <span class="font-bold not-italic">A Analogia:</span> Em vez de encomendar o projeto arquitetônico de um
+                único prédio, estamos fundando um Escritório de Engenharia em sociedade. Suas obras iniciais servem como
+                laboratório e vitrine de sucesso. Com a tecnologia validada, a nova empresa passa a prospectar
+                ativamente o mercado, prestando serviços e lucrando com os projetos de outras incorporadoras.
               </p>
             </div>
 
             <!-- Tabela de Sweat Equity Injetada no M3 -->
-            <div class="border-t border-white/10 pt-8 mt-4">
-              <h4 class="font-tech text-white text-xs tracking-widest uppercase mb-4">Validação da Sociedade (Sweat
-                Equity)</h4>
-              <p class="font-body text-gray-400 text-xs mb-6 leading-relaxed">
-                <strong>Risco vs Recompensa:</strong> Quanto menor o pró-labore técnico mensal, mais risco o
-                desenvolvedor assume junto ao investidor, justificando uma fatia maior de Equity (Vesting de 24 meses).
-                <br />Base: Aporte Estimado de $450k USD (Câmbio R$ 5,50).
-              </p>
-
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- Cenário A -->
-                <div class="glass-panel bg-black/50 p-4 border border-white/10">
-                  <div class="font-tech text-[9px] text-gray-400 uppercase mb-1 tracking-widest">Cenário A</div>
-                  <div class="font-headline font-bold text-white mb-2">Skin in the Game</div>
-                  <div class="space-y-1 mb-3">
-                    <div class="flex justify-between text-xs"><span class="text-gray-400">Pró-labore</span> <span
-                        class="text-white font-mono">R$ 35k</span></div>
-                    <div class="flex justify-between text-xs"><span class="text-gray-400">Custo Total</span> <span
-                        class="text-white font-mono">R$ 840k</span></div>
-                  </div>
-                  <div class="pt-2 border-t border-white/10 flex justify-between items-center">
-                    <span class="font-tech text-[9px] text-gray-400 uppercase">Dev Equity</span>
-                    <span class="font-headline font-black text-white text-xl">50%</span>
-                  </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pointer-events-auto">
+              <!-- Cenário A -->
+              <div
+                class="glass-panel bg-black/50 p-4 border border-white/10 cursor-pointer hover:border-cyan/50 transition-all scenario-card relative"
+                onclick="updateM3Data('A', this, event)">
+                <div
+                  class="selection-badge hidden absolute -top-2 -right-2 bg-cyan text-black text-[8px] font-bold px-2 py-0.5 rounded-sm font-tech">
+                  Selecionado</div>
+                <div class="font-tech text-[9px] text-gray-400 uppercase mb-1 tracking-widest">Cenário A</div>
+                <div class="font-headline font-bold text-white mb-2">Skin in the Game</div>
+                <div class="space-y-1 mb-3">
+                  <div class="flex justify-between text-xs"><span class="text-gray-400">Pró-labore</span> <span
+                      class="text-white font-mono">R$ 35k</span></div>
+                  <div class="flex justify-between text-xs"><span class="text-gray-400">Custo Total</span> <span
+                      class="text-white font-mono">R$ 840k</span></div>
                 </div>
-
-                <!-- Cenário B -->
-                <div class="glass-panel bg-black/50 p-4 border border-cyan/30 relative">
-                  <div
-                    class="absolute -top-2 -right-2 bg-cyan text-black text-[8px] font-bold px-2 py-0.5 rounded-sm font-tech">
-                    Ideal</div>
-                  <div class="font-tech text-[9px] text-cyan uppercase mb-1 tracking-widest">Cenário B</div>
-                  <div class="font-headline font-bold text-white mb-2">Equilibrado</div>
-                  <div class="space-y-1 mb-3">
-                    <div class="flex justify-between text-xs"><span class="text-gray-400">Pró-labore</span> <span
-                        class="text-white font-mono">R$ 50k</span></div>
-                    <div class="flex justify-between text-xs"><span class="text-gray-400">Custo Total</span> <span
-                        class="text-white font-mono">R$ 1.2M</span></div>
-                  </div>
-                  <div class="pt-2 border-t border-white/10 flex justify-between items-center">
-                    <span class="font-tech text-[9px] text-gray-400 uppercase">Dev Equity</span>
-                    <span class="font-headline font-black text-cyan text-xl">35%</span>
-                  </div>
+                <div class="pt-2 border-t border-white/10 flex justify-between items-center">
+                  <span class="font-tech text-[9px] text-gray-400 uppercase">Dev Equity</span>
+                  <span class="font-headline font-black text-white text-xl">50%</span>
                 </div>
+              </div>
 
-                <!-- Cenário C -->
-                <div class="glass-panel bg-black/50 p-4 border border-white/10">
-                  <div class="font-tech text-[9px] text-gray-400 uppercase mb-1 tracking-widest">Cenário C</div>
-                  <div class="font-headline font-bold text-white mb-2">Executivo</div>
-                  <div class="space-y-1 mb-3">
-                    <div class="flex justify-between text-xs"><span class="text-gray-400">Pró-labore</span> <span
-                        class="text-white font-mono">R$ 65k</span></div>
-                    <div class="flex justify-between text-xs"><span class="text-gray-400">Custo Total</span> <span
-                        class="text-white font-mono">R$ 1.56M</span></div>
-                  </div>
-                  <div class="pt-2 border-t border-white/10 flex justify-between items-center">
-                    <span class="font-tech text-[9px] text-gray-400 uppercase">Dev Equity</span>
-                    <span class="font-headline font-black text-white text-xl">20%</span>
-                  </div>
+              <!-- Cenário B -->
+              <div
+                class="glass-panel bg-black/50 p-4 border border-cyan shadow-[0_0_15px_rgba(0,229,255,0.3)] relative cursor-pointer hover:border-cyan/80 transition-all scenario-card"
+                onclick="updateM3Data('B', this, event)">
+                <div
+                  class="selection-badge absolute -top-2 -right-2 bg-cyan text-black text-[8px] font-bold px-2 py-0.5 rounded-sm font-tech">
+                  Selecionado</div>
+                <div class="font-tech text-[9px] text-cyan uppercase mb-1 tracking-widest">Cenário B</div>
+                <div class="font-headline font-bold text-white mb-2">Equilibrado</div>
+                <div class="space-y-1 mb-3">
+                  <div class="flex justify-between text-xs"><span class="text-gray-400">Pró-labore</span> <span
+                      class="text-white font-mono">R$ 50k</span></div>
+                  <div class="flex justify-between text-xs"><span class="text-gray-400">Custo Total</span> <span
+                      class="text-white font-mono">R$ 1.2M</span></div>
+                </div>
+                <div class="pt-2 border-t border-white/10 flex justify-between items-center">
+                  <span class="font-tech text-[9px] text-gray-400 uppercase">Dev Equity</span>
+                  <span class="font-headline font-black text-cyan text-xl">35%</span>
+                </div>
+              </div>
+
+              <!-- Cenário C -->
+              <div
+                class="glass-panel bg-black/50 p-4 border border-white/10 cursor-pointer hover:border-cyan/50 transition-all scenario-card relative"
+                onclick="updateM3Data('C', this, event)">
+                <div
+                  class="selection-badge hidden absolute -top-2 -right-2 bg-cyan text-black text-[8px] font-bold px-2 py-0.5 rounded-sm font-tech">
+                  Selecionado</div>
+                <div class="font-tech text-[9px] text-gray-400 uppercase mb-1 tracking-widest">Cenário C</div>
+                <div class="font-headline font-bold text-white mb-2">Executivo</div>
+                <div class="space-y-1 mb-3">
+                  <div class="flex justify-between text-xs"><span class="text-gray-400">Pró-labore</span> <span
+                      class="text-white font-mono">R$ 65k</span></div>
+                  <div class="flex justify-between text-xs"><span class="text-gray-400">Custo Total</span> <span
+                      class="text-white font-mono">R$ 1.56M</span></div>
+                </div>
+                <div class="pt-2 border-t border-white/10 flex justify-between items-center">
+                  <span class="font-tech text-[9px] text-gray-400 uppercase">Dev Equity</span>
+                  <span class="font-headline font-black text-white text-xl">20%</span>
                 </div>
               </div>
             </div>
 
-          </div>
-        </div>
+            <div class="mt-8 border-t border-white/10 pt-6">
+              <h4 class="font-tech text-white text-xs tracking-widest uppercase mb-4">Validação da Sociedade (Sweat
+                Equity)</h4>
 
+              <p class="font-body text-gray-400 text-xs leading-relaxed mb-4">
+                <strong>O que estamos propondo:</strong> No <strong>Modelo 01 (Licenciamento)</strong>, o cliente paga
+                pelo direito de uso da ferramenta, mas a propriedade intelectual (IP) permanece com o desenvolvedor. No
+                <strong>Modelo 02 (Exclusividade)</strong>, o cliente paga um prêmio para "blindar" a tecnologia,
+                impedindo que sua vantagem competitiva seja vendida para concorrentes. Já no <strong>Modelo 03
+                  (Spin-off)</strong>, o custo de desenvolvimento é transformado em aporte de capital para fundar uma
+                nova empresa de tecnologia.
+              </p>
+
+              <p class="font-body text-gray-400 text-xs leading-relaxed">
+                <strong>Risco vs Recompensa:</strong> Quanto menor o pró-labore técnico mensal, mais risco o
+                desenvolvedor assume junto ao investidor, justificando uma fatia maior de Equity (Vesting de 24 meses).
+                <br />Base: Aporte Estimado de $450k USD (Câmbio R$ 5,50).
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+    </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="relative py-24 bg-footer flex items-center justify-center">
-    <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/90 to-bg/50"></div>
-    <div class="relative z-10 text-center px-6 max-w-4xl">
-      <h2 class="font-headline font-black text-2xl md:text-4xl uppercase leading-tight mb-6">
-        Da união da experiência técnica<br />à <span class="text-gold italic">beleza visual.</span>
-      </h2>
-      <p class="font-body text-gray-400 text-sm mb-10">Estamos lapidando o futuro da construção.</p>
+  <footer
+    class="relative pt-40 pb-12 bg-bg flex flex-col items-center justify-center border-t border-white/5 overflow-hidden">
+    <!-- Imagem de fundo original restaurada com gradiente protetor -->
+    <div class="absolute inset-0 bg-footer bg-cover bg-center opacity-40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/95 to-transparent"></div>
+    <div class="arch-grid z-0 opacity-20"></div>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <div class="relative z-10 text-center px-6 max-w-4xl mb-24 mt-8">
+      <img src="/radius/Digital_Twin_Journey/logo.png" alt="Proinov Radius"
+        class="h-24 md:h-32 w-auto mx-auto mb-10 opacity-90 drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]" />
+
+      <h2 class="font-headline font-black text-3xl md:text-5xl uppercase leading-tight mb-6">
+        Acredite no ativo que vai<br /><span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-200">Redefinir o Mercado.</span>
+      </h2>
+      <p class="font-body text-gray-300 text-sm md:text-base mb-12 max-w-3xl mx-auto leading-relaxed">
+        <span class="text-gold font-bold block mb-4 text-xl">O tijolo constrói o patrimônio, a tecnologia constrói o
+          múltiplo.</span>
+        O Radius 3D é a evolução da sua visão: a tecnologia antecipando o futuro da construção. Criamos um modelo com
+        payback acelerado e escala exponencial para que, juntos, possamos consolidar um ativo único, construído desde o
+        primeiro dia para ser a referência absoluta de mercado.
+      </p>
+
+      <div class="glass-panel p-8 border-l-4 border-gold bg-white/5 max-w-2xl mx-auto mb-12 text-left">
+        <p class="font-body text-white text-lg leading-relaxed italic">
+          "Neto, você já domina o horizonte físico do litoral; Esta frente é a ferramenta para você dominar a
+          inteligência por trás de cada metro quadrado construído no Brasil."
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
         <a href="https://wa.me/+5516988162089" target="_blank"
-          class="px-8 py-4 bg-gold hover:bg-white text-black font-tech text-[10px] tracking-widest uppercase transition-colors">
-          Vamos Conversar:
+          class="group relative px-8 py-4 bg-gold hover:bg-white text-black font-tech text-[10px] tracking-widest uppercase transition-all duration-500 overflow-hidden shadow-[0_0_30px_rgba(201,168,76,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.5)] flex items-center gap-3">
+          <span
+            class="absolute top-0 left-0 w-full h-full bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out skew-x-12"></span>
+          <span class="relative z-10 font-bold">Aplicar para Partnership</span>
+          <span
+            class="material-symbols-outlined relative z-10 text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </a>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div
+      class="relative z-10 w-full max-w-[1400px] mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-2">
+        <img src="/radius/Digital_Twin_Journey/logo.png" alt="Proinov"
+          class="h-6 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all" />
+      </div>
+      <div class="font-tech text-[9px] text-gray-600 tracking-widest uppercase text-center">
+        © 2026 Proinov Brasil. Todos os direitos reservados.
+      </div>
+      <div class="font-tech text-[9px] text-gray-500 tracking-widest uppercase flex gap-6">
+        <a href="#" class="hover:text-gold transition-colors">Termos de Partnership</a>
+        <a href="#" class="hover:text-gold transition-colors">Privacidade</a>
       </div>
     </div>
   </footer>
@@ -750,7 +958,7 @@
     const baseDatasets = [
       {
         label: 'M1: SaaS Standard',
-        data: [0, 20, 0, 90, 50],
+        data: [40, 20, 10, 40, 50],
         backgroundColor: 'rgba(156, 163, 175, 0.1)',
         borderColor: 'rgba(156, 163, 175, 0.8)',
         pointBackgroundColor: 'rgba(156, 163, 175, 1)',
@@ -758,15 +966,15 @@
       },
       {
         label: 'M2: White Label',
-        data: [0, 50, 100, 70, 100],
+        data: [60, 30, 100, 80, 50],
         backgroundColor: 'rgba(201, 168, 76, 0.2)',
         borderColor: 'rgba(201, 168, 76, 1)',
         pointBackgroundColor: 'rgba(201, 168, 76, 1)',
         borderWidth: 2,
       },
       {
-        label: 'M3: Spin-off (Contech)',
-        data: [100, 100, 100, 50, 80],
+        label: 'M3: Spin-off (Equilibrado)',
+        data: [80, 60, 70, 70, 80],
         backgroundColor: 'rgba(0, 229, 255, 0.15)',
         borderColor: 'rgba(0, 229, 255, 1)',
         pointBackgroundColor: 'rgba(0, 229, 255, 1)',
@@ -781,7 +989,7 @@
         radarChart = new Chart(ctx, {
           type: 'radar',
           data: {
-            labels: ['Equity/Exit', 'Retorno (LP)', 'Exclusividade', 'Setup Fast', 'Customização'],
+            labels: ['Investimento', 'ROI', 'Exclusividade', 'Controle', 'Customização'],
             datasets: JSON.parse(JSON.stringify(baseDatasets))
           },
           options: {
@@ -826,10 +1034,72 @@
       { bg: 'transparent', border: 'rgba(0, 229, 255, 0.2)', point: 'transparent', width: 1 }
     ];
 
+    function updateM3Data(type, element, event) {
+      if (event) {
+        event.stopPropagation();
+      }
+
+      // Change the base M3 data based on the scenario
+      // Labels: ['Investimento', 'ROI', 'Exclusividade', 'Setup Rápido', 'Customização']
+      let newData = [];
+      let newLabel = '';
+      if (type === 'A') {
+        newData = [80, 60, 70, 70, 80];
+        newLabel = 'M3: Spin-off (Skin in the Game)';
+      } else if (type === 'B') {
+        newData = [90, 80, 70, 80, 90];
+        newLabel = 'M3: Spin-off (Equilibrado)';
+      } else if (type === 'C') {
+        newData = [100, 100, 80, 90, 100];
+        newLabel = 'M3: Spin-off (Executivo)';
+      }
+
+      // Update the chart if we are highlighting M3
+      if (radarChart) {
+        radarChart.data.datasets[2].data = newData;
+        radarChart.data.datasets[2].label = newLabel;
+        radarChart.update();
+      }
+
+      // Update UI selection
+      document.querySelectorAll('.scenario-card').forEach(card => {
+        card.classList.remove('border-cyan', 'shadow-[0_0_15px_rgba(0,229,255,0.3)]', 'border-cyan/30');
+        card.classList.add('border-white/10');
+
+        // Reset badge and text colors
+        let badge = card.querySelector('.selection-badge');
+        if (badge) badge.classList.add('hidden');
+
+        let titleLabel = card.querySelector('.font-tech.uppercase');
+        if (titleLabel) {
+          titleLabel.classList.remove('text-cyan');
+          titleLabel.classList.add('text-gray-400');
+        }
+      });
+
+      if (element) {
+        element.classList.remove('border-white/10');
+        element.classList.add('border-cyan', 'shadow-[0_0_15px_rgba(0,229,255,0.3)]');
+
+        // Show badge and highlight text
+        let badge = element.querySelector('.selection-badge');
+        if (badge) badge.classList.remove('hidden');
+
+        let titleLabel = element.querySelector('.font-tech.uppercase');
+        if (titleLabel) {
+          titleLabel.classList.remove('text-gray-400');
+          titleLabel.classList.add('text-cyan');
+        }
+      }
+
+      // Call highlightDataset to ensure M3 is highlighted and others are dimmed
+      highlightDataset(2);
+    }
+
     function highlightDataset(index) {
       if (!radarChart) return;
 
-      // Atualiza UI dos Cards
+      // Atualiza UI dos Cards Principais
       document.querySelectorAll('.tier-card').forEach((card, i) => {
         if (i === index) {
           card.classList.remove('opacity-60', 'scale-[0.98]');

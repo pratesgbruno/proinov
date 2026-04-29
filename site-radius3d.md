@@ -5,7 +5,7 @@
 
 **[Headline]**: Transformamos o Bruto em Precisão.
 
-**[Sub-headline]**: Cada obra é uma pedra sendo lapidada até atingir seu valor máximo. Conheça a plataforma de "Digital Twin" que eleva o padrão de construção, venda e experiência do cliente.
+**[Sub-headline]**: Você ainda sofre com gestão da obra em andamento, equipes, reports, dados, previsibilidade? usa o Prevision, InMeta, equipe de engeharia mas não consue dar visibilidade para o cliente final? 
 
 **[Botão (CTA)]**: Ver a Obra Ganhando Vida ➔
 
