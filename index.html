@@ -1,392 +1,430 @@
 <!DOCTYPE html>
 <html class="dark" lang="pt-BR">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PROINOV</title>
-<meta name="description" content="PROINOV — Engineering Innovation. Empresa, Bruno Prates, Proinov Saúde, PlannerDoc."/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=Inter:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "background": "#0a0a0a",
-          "surface": "#121212",
-          "primary": "#ffffff",
-          "secondary": "#a1a1aa",
-          "outline": "#27272a"
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>PROINOV</title>
+  <meta name="description"
+    content="PROINOV — Engineering Innovation. Empresa, Bruno Prates, Proinov Radius, PlannerDoc." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,800;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=Inter:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#0a0a0a",
+            "surface": "#121212",
+            "primary": "#ffffff",
+            "secondary": "#a1a1aa",
+            "outline": "#27272a"
+          },
+          fontFamily: {
+            headline: ["Epilogue", "sans-serif"],
+            body: ["Plus Jakarta Sans", "sans-serif"],
+            label: ["Inter", "sans-serif"]
+          },
+          letterSpacing: {
+            "ultra-wide": "0.4em",
+            "tightest": "-0.04em"
+          }
         },
-        fontFamily: {
-          headline: ["Epilogue", "sans-serif"],
-          body: ["Plus Jakarta Sans", "sans-serif"],
-          label: ["Inter", "sans-serif"]
-        },
-        letterSpacing: {
-          "ultra-wide": "0.4em",
-          "tightest": "-0.04em"
-        }
       },
-    },
-  }
-</script>
-<style>
-  .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
-  }
-  .glass-nav {
-    background: rgba(10, 10, 10, 0.5);
-    backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06)
-  }
-  .glass-footer {
-    background: rgba(10, 10, 10, 0.8);
-    backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255, 255, 255, 0.06)
-  }
-  .quadrant-title {
-    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7)
-  }
-  /* Desktop hover effects */
-  @media (hover: hover) {
-    .quadrant-container:hover .quadrant-image {
-      transform: scale(1.06)
     }
-    .quadrant-container:hover .quadrant-content {
-      transform: translateY(-8px)
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
     }
-    .quadrant-container:hover .quadrant-scrim {
-      background: rgba(0, 0, 0, 0.15)
+
+    .glass-nav {
+      background: rgba(10, 10, 10, 0.5);
+      backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06)
     }
-  }
-  /* Mobile: tap feedback */
-  @media (hover: none) {
-    .quadrant-container:active .quadrant-image {
-      transform: scale(1.03)
+
+    .glass-footer {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.06)
     }
-    .quadrant-container:active .quadrant-scrim {
-      background: rgba(0, 0, 0, 0.15)
+
+    .quadrant-title {
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7)
     }
-  }
-  /* Scroll snap on mobile */
-  @media (max-width: 767px) {
-    .snap-container {
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-      height: 100dvh;
+
+    /* Desktop hover effects */
+    @media (hover: hover) {
+      .quadrant-container:hover .quadrant-image {
+        transform: scale(1.06)
+      }
+
+      .quadrant-container:hover .quadrant-content {
+        transform: translateY(-8px)
+      }
+
+      .quadrant-container:hover .quadrant-scrim {
+        background: rgba(0, 0, 0, 0.15)
+      }
     }
-    .snap-item {
-      scroll-snap-align: start;
-      scroll-snap-stop: always;
+
+    /* Mobile: tap feedback */
+    @media (hover: none) {
+      .quadrant-container:active .quadrant-image {
+        transform: scale(1.03)
+      }
+
+      .quadrant-container:active .quadrant-scrim {
+        background: rgba(0, 0, 0, 0.15)
+      }
     }
-  }
-</style>
+
+    /* Scroll snap on mobile */
+    @media (max-width: 767px) {
+      .snap-container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100dvh;
+      }
+
+      .snap-item {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+    }
+  </style>
 </head>
+
 <body class="bg-background text-primary font-body selection:bg-white selection:text-black overflow-hidden">
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-16 py-5 md:py-6 glass-nav">
-  <div class="text-lg md:text-2xl font-black tracking-[0.3em] md:tracking-ultra-wide font-headline uppercase">
-    PROINOV
-  </div>
-  <div class="hidden lg:flex gap-12 items-center">
-    <a class="font-label text-[10px] tracking-ultra-wide uppercase text-white border-b border-white pb-1 transition-all" href="/empresa">Empresa</a>
-    <a class="font-label text-[10px] tracking-ultra-wide uppercase text-secondary hover:text-white transition-colors" href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer">Bruno Prates</a>
-    <a class="font-label text-[10px] tracking-ultra-wide uppercase text-secondary hover:text-white transition-colors" href="/saude">Saúde</a>
-    <a class="font-label text-[10px] tracking-ultra-wide uppercase text-secondary hover:text-white transition-colors" href="https://plannerdoc.com.br/" target="_blank" rel="noopener noreferrer">PlannerDoc</a>
-  </div>
-  <div class="flex items-center gap-4">
-    <span class="hidden md:block font-label text-[9px] tracking-widest text-secondary uppercase">proinov.com.br</span>
-    <!-- Mobile: scroll dots indicator -->
-    <div class="flex gap-1.5 lg:hidden" id="scroll-dots">
-      <span class="dot w-1.5 h-1.5 rounded-full bg-white transition-opacity" data-index="0"></span>
-      <span class="dot w-1.5 h-1.5 rounded-full bg-white/30 transition-opacity" data-index="1"></span>
-      <span class="dot w-1.5 h-1.5 rounded-full bg-white/30 transition-opacity" data-index="2"></span>
-      <span class="dot w-1.5 h-1.5 rounded-full bg-white/30 transition-opacity" data-index="3"></span>
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-16 py-5 md:py-6 glass-nav">
+    <div class="text-lg md:text-2xl font-black tracking-[0.3em] md:tracking-ultra-wide font-headline uppercase">
+      PROINOV
     </div>
-    <button id="menu-toggle" class="text-white cursor-pointer hover:opacity-70 transition-opacity lg:hidden p-1">
-      <span class="material-symbols-outlined text-[22px]">menu</span>
+    <div class="hidden lg:flex gap-12 items-center">
+      <a class="font-label text-[10px] tracking-ultra-wide uppercase text-white border-b border-white pb-1 transition-all"
+        href="/empresa">Empresa</a>
+      <a class="font-label text-[10px] tracking-ultra-wide uppercase text-secondary hover:text-white transition-colors"
+        href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer">Bruno Prates</a>
+      <a class="font-label text-[10px] tracking-ultra-wide uppercase text-secondary hover:text-white transition-colors"
+        href="/radius">Radius</a>
+      <a class="font-label text-[10px] tracking-ultra-wide uppercase text-secondary hover:text-white transition-colors"
+        href="https://plannerdoc.com.br/" target="_blank" rel="noopener noreferrer">PlannerDoc</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <span class="hidden md:block font-label text-[9px] tracking-widest text-secondary uppercase">proinov.com.br</span>
+      <!-- Mobile: scroll dots indicator -->
+      <div class="flex gap-1.5 lg:hidden" id="scroll-dots">
+        <span class="dot w-1.5 h-1.5 rounded-full bg-white transition-opacity" data-index="0"></span>
+        <span class="dot w-1.5 h-1.5 rounded-full bg-white/30 transition-opacity" data-index="1"></span>
+        <span class="dot w-1.5 h-1.5 rounded-full bg-white/30 transition-opacity" data-index="2"></span>
+        <span class="dot w-1.5 h-1.5 rounded-full bg-white/30 transition-opacity" data-index="3"></span>
+      </div>
+      <button id="menu-toggle" class="text-white cursor-pointer hover:opacity-70 transition-opacity lg:hidden p-1">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu (fullscreen overlay) -->
+  <div id="mobile-menu" class="fixed inset-0 z-[90] hidden flex-col justify-center"
+    style="background: rgba(0,0,0,0.97); backdrop-filter: blur(24px);">
+    <div class="px-10 flex flex-col gap-2">
+      <p class="font-label text-[9px] tracking-[0.5em] uppercase text-secondary mb-8">Navegar para</p>
+      <a class="group flex items-center justify-between py-5 border-b border-white/10 transition-all" href="/empresa">
+        <span class="font-headline font-black text-3xl uppercase italic text-white">Empresa</span>
+        <span
+          class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
+      </a>
+      <a class="group flex items-center justify-between py-5 border-b border-white/10 transition-all"
+        href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer">
+        <span class="font-headline font-black text-3xl uppercase text-white">Bruno Prates</span>
+        <span
+          class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
+      </a>
+      <a class="group flex items-center justify-between py-5 border-b border-white/10 transition-all" href="/radius">
+        <span class="font-headline font-black text-3xl uppercase italic text-white">Radius</span>
+        <span
+          class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
+      </a>
+      <a class="group flex items-center justify-between py-5 transition-all" href="https://plannerdoc.com.br/"
+        target="_blank" rel="noopener noreferrer">
+        <span class="font-headline font-black text-3xl uppercase text-white">PlannerDoc</span>
+        <span
+          class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
+      </a>
+    </div>
+    <button id="menu-close" class="absolute top-5 right-6 text-white p-1">
+      <span class="material-symbols-outlined text-[22px]">close</span>
     </button>
   </div>
-</nav>
 
-<!-- Mobile Menu (fullscreen overlay) -->
-<div id="mobile-menu" class="fixed inset-0 z-[90] hidden flex-col justify-center" style="background: rgba(0,0,0,0.97); backdrop-filter: blur(24px);">
-  <div class="px-10 flex flex-col gap-2">
-    <p class="font-label text-[9px] tracking-[0.5em] uppercase text-secondary mb-8">Navegar para</p>
-    <a class="group flex items-center justify-between py-5 border-b border-white/10 transition-all" href="/empresa">
-      <span class="font-headline font-black text-3xl uppercase italic text-white">Empresa</span>
-      <span class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
-    </a>
-    <a class="group flex items-center justify-between py-5 border-b border-white/10 transition-all" href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer">
-      <span class="font-headline font-black text-3xl uppercase text-white">Bruno Prates</span>
-      <span class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
-    </a>
-    <a class="group flex items-center justify-between py-5 border-b border-white/10 transition-all" href="/saude">
-      <span class="font-headline font-black text-3xl uppercase italic text-white">Saúde</span>
-      <span class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
-    </a>
-    <a class="group flex items-center justify-between py-5 transition-all" href="https://plannerdoc.com.br/" target="_blank" rel="noopener noreferrer">
-      <span class="font-headline font-black text-3xl uppercase text-white">PlannerDoc</span>
-      <span class="material-symbols-outlined text-secondary group-hover:text-white transition-colors">arrow_forward</span>
-    </a>
+  <!-- Side Labels (Desktop only) -->
+  <div class="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col gap-24 items-center">
+    <span
+      class="rotate-[-90deg] font-label text-[8px] tracking-[0.5em] uppercase text-secondary whitespace-nowrap">Universo
+      Proinov</span>
+    <span
+      class="rotate-[-90deg] font-label text-[8px] tracking-[0.5em] uppercase text-secondary whitespace-nowrap">Selecione
+      um Mundo</span>
   </div>
-  <button id="menu-close" class="absolute top-5 right-6 text-white p-1">
-    <span class="material-symbols-outlined text-[22px]">close</span>
-  </button>
-</div>
 
-<!-- Side Labels (Desktop only) -->
-<div class="fixed left-6 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col gap-24 items-center">
-  <span class="rotate-[-90deg] font-label text-[8px] tracking-[0.5em] uppercase text-secondary whitespace-nowrap">Universo Proinov</span>
-  <span class="rotate-[-90deg] font-label text-[8px] tracking-[0.5em] uppercase text-secondary whitespace-nowrap">Selecione um Mundo</span>
-</div>
+  <!-- MOBILE: Scroll-snap vertical layout -->
+  <div class="snap-container md:hidden" id="mobile-scroll">
 
-<!-- MOBILE: Scroll-snap vertical layout -->
-<div class="snap-container md:hidden" id="mobile-scroll">
-
-  <!-- Q1 Mobile: Proinov Empresa -->
-  <a href="/empresa" class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
-    <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
-      <img
-        alt="Proinov Empresa"
-        class="w-full h-full object-cover"
-        src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=75"
-        loading="eager"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/50 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
-      <span class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
-        <span class="w-6 h-[1px] bg-white/40"></span>
-        Studio &amp; Estratégia
-      </span>
-      <h2 class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white tracking-tightest leading-[0.88] uppercase italic quadrant-title">
-        Projetos<br/>Tecnologia
-      </h2>
-      <div class="mt-6 flex items-center gap-2 text-white/60">
-        <span class="font-label text-[9px] tracking-widest uppercase">Acessar</span>
-        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    <!-- Q1 Mobile: Proinov Empresa -->
+    <a href="/empresa" class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
+      <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
+        <img alt="Proinov Empresa" class="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=75"
+          loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/50 quadrant-scrim"></div>
       </div>
-    </div>
-  </a>
-
-  <!-- Q2 Mobile: Bruno Prates -->
-  <a href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer" class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
-    <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
-      <img
-        alt="Bruno Prates"
-        class="w-full h-full object-cover"
-        src="https://assets.imgix.net/~text?txt=ayahuasca&w=800&h=1200&bg=1a0a2e&txt-color=ffffff&txt-size=48&txt-align=center,middle"
-        loading="lazy"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
-      <span class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
-        <span class="w-6 h-[1px] bg-white/40"></span>
-        Identidade Pessoal
-      </span>
-      <h2 class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white tracking-tightest leading-[0.88] uppercase quadrant-title">
-        Bruno<br/>Prates
-      </h2>
-      <div class="mt-6 flex items-center gap-2 text-white/60">
-        <span class="font-label text-[9px] tracking-widest uppercase">LinkedIn</span>
-        <span class="material-symbols-outlined text-sm">open_in_new</span>
+      <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
+        <span
+          class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
+          <span class="w-6 h-[1px] bg-white/40"></span>
+          Studio &amp; Estratégia
+        </span>
+        <h2
+          class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white/50 tracking-tightest leading-[0.88] uppercase italic quadrant-title">
+          Projetos<br />Tecnologia
+        </h2>
+        <div class="mt-6 flex items-center gap-2 text-white/60">
+          <span class="font-label text-[9px] tracking-widest uppercase">Acessar</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <!-- Q3 Mobile: Proinov Saúde -->
-  <a href="/saude" class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
-    <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
-      <img
-        alt="Proinov Saúde"
-        class="w-full h-full object-cover"
-        src="assets/img/img03.jpg"
-        loading="lazy"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/50 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
-      <span class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
-        <span class="w-6 h-[1px] bg-white/40"></span>
-        Inovação em Saúde
-      </span>
-      <h2 class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white tracking-tightest leading-[0.88] uppercase italic quadrant-title">
-        Proinov<br/>Saúde
-      </h2>
-      <div class="mt-6 flex items-center gap-2 text-white/60">
-        <span class="font-label text-[9px] tracking-widest uppercase">Acessar</span>
-        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    <!-- Q2 Mobile: Bruno Prates -->
+    <a href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer"
+      class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
+      <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
+        <img alt="Bruno Prates" class="w-full h-full object-cover"
+          src="https://assets.imgix.net/~text?txt=ayahuasca&w=800&h=1200&bg=1a0a2e&txt-color=ffffff&txt-size=48&txt-align=center,middle"
+          loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 quadrant-scrim"></div>
       </div>
-    </div>
-  </a>
-
-  <!-- Q4 Mobile: PlannerDoc -->
-  <a href="https://plannerdoc.com.br/" target="_blank" rel="noopener noreferrer" class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
-    <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
-      <img
-        alt="PlannerDoc"
-        class="w-full h-full object-cover"
-        src="assets/img/img04.png"
-        loading="lazy"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/45 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
-      <span class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
-        <span class="w-6 h-[1px] bg-white/40"></span>
-        Sistemas &amp; para médicos
-      </span>
-      <h2 class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white tracking-tightest leading-[0.88] uppercase quadrant-title">
-        Planner<br/>Doc
-      </h2>
-      <div class="mt-6 flex items-center gap-2 text-white/60">
-        <span class="font-label text-[9px] tracking-widest uppercase">Acessar</span>
-        <span class="material-symbols-outlined text-sm">open_in_new</span>
+      <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
+        <span
+          class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
+          <span class="w-6 h-[1px] bg-white/40"></span>
+          Identidade Pessoal
+        </span>
+        <h2
+          class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white/50 tracking-tightest leading-[0.88] uppercase quadrant-title">
+          Bruno<br />Prates
+        </h2>
+        <div class="mt-6 flex items-center gap-2 text-white/60">
+          <span class="font-label text-[9px] tracking-widest uppercase">LinkedIn</span>
+          <span class="material-symbols-outlined text-sm">open_in_new</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-</div>
+    <!-- Q3 Mobile: Radius -->
+    <a href="/radius" class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
+      <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
+        <img alt="Radius" class="w-full h-full object-cover" src="radius/Digital_Twin_Journey/bgimpact00.jpg"
+          loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/50 quadrant-scrim"></div>
+      </div>
+      <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
+        <span
+          class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
+          <span class="w-6 h-[1px] bg-white/40"></span>
+          3D · ConstruTech
+        </span>
+        <h2
+          class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white/50 tracking-tightest leading-[0.88] uppercase italic quadrant-title">
+          Radius
+        </h2>
+        <div class="mt-6 flex items-center gap-2 text-white/60">
+          <span class="font-label text-[9px] tracking-widest uppercase">Precision Refined</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </div>
+      </div>
+    </a>
 
-<!-- DESKTOP: 2x2 grid layout -->
-<main class="hidden md:grid grid-cols-2 grid-rows-2 h-screen w-screen overflow-hidden">
+    <!-- Q4 Mobile: PlannerDoc -->
+    <a href="https://plannerdoc.com.br/" target="_blank" rel="noopener noreferrer"
+      class="snap-item relative block overflow-hidden quadrant-container" style="height: 100dvh;">
+      <div class="absolute inset-0 transition-transform duration-[1500ms] ease-out quadrant-image">
+        <img alt="PlannerDoc" class="w-full h-full object-cover" src="assets/img/img04.png" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/45 quadrant-scrim"></div>
+      </div>
+      <div class="absolute inset-x-8 bottom-16 z-10 quadrant-content">
+        <span
+          class="block font-label text-[9px] tracking-ultra-wide uppercase text-white/50 mb-3 flex items-center gap-2">
+          <span class="w-6 h-[1px] bg-white/40"></span>
+          Sistemas &amp; para médicos
+        </span>
+        <h2
+          class="font-headline font-black text-[clamp(2.8rem,12vw,4rem)] text-white/50 tracking-tightest leading-[0.88] uppercase quadrant-title">
+          Planner<br />Doc
+        </h2>
+        <div class="mt-6 flex items-center gap-2 text-white/60">
+          <span class="font-label text-[9px] tracking-widest uppercase">Acessar</span>
+          <span class="material-symbols-outlined text-sm">open_in_new</span>
+        </div>
+      </div>
+    </a>
 
-  <!-- Q1: Proinov Empresa -->
-  <a href="/empresa" class="relative group cursor-pointer overflow-hidden quadrant-container block">
-    <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
-      <img
-        alt="Proinov Empresa"
-        class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000"
-        src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80"
-      />
-      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 transition-transform duration-700 ease-out quadrant-content">
-      <span class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex items-center gap-3">
-        <span class="w-8 h-[1px] bg-white/40"></span>
-        Studio &amp; Estratégia
-      </span>
-      <h2 class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white tracking-tightest leading-[0.9] uppercase italic quadrant-title">
-        Projetos<br/>Tecnologia
-      </h2>
-    </div>
-  </a>
-
-  <!-- Q2: Bruno Prates -->
-  <a href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer" class="relative group cursor-pointer overflow-hidden quadrant-container block">
-    <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
-      <img
-        alt="Bruno Prates"
-        class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
-        src="assets/img/img02.png"
-      />
-      <div class="absolute inset-0 bg-black/55 group-hover:bg-black/25 transition-colors duration-700 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 text-right transition-transform duration-700 ease-out quadrant-content">
-      <span class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex justify-end items-center gap-3">
-        Identidade Pessoal
-        <span class="w-8 h-[1px] bg-white/40"></span>
-      </span>
-      <h2 class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white tracking-tightest leading-[0.9] uppercase quadrant-title">
-        Bruno<br/>Prates
-      </h2>
-    </div>
-  </a>
-
-  <!-- Q3: Proinov Saúde -->
-  <a href="/saude" class="relative group cursor-pointer overflow-hidden quadrant-container block">
-    <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
-      <img
-        alt="Proinov Saúde"
-        class="w-full h-full object-cover grayscale-[0.4] group-hover:grayscale-0 transition-all duration-1000"
-        src="assets/img/img03.jpg"
-      />
-      <div class="absolute inset-0 bg-black/60 group-hover:bg-black/30 transition-colors duration-700 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 transition-transform duration-700 ease-out quadrant-content">
-      <span class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex items-center gap-3">
-        <span class="w-8 h-[1px] bg-white/40"></span>
-        Inovação em Saúde
-      </span>
-      <h2 class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white tracking-tightest leading-[0.9] uppercase italic quadrant-title">
-        Proinov<br/>Saúde
-      </h2>
-    </div>
-  </a>
-
-  <!-- Q4: PlannerDoc -->
-  <a href="https://plannerdoc.com.br/" target="_blank" rel="noopener noreferrer" class="relative group cursor-pointer overflow-hidden quadrant-container block">
-    <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
-      <img
-        alt="PlannerDoc"
-        class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-1000"
-        src="assets/img/img04.png"
-      />
-      <div class="absolute inset-0 bg-black/55 group-hover:bg-black/25 transition-colors duration-700 quadrant-scrim"></div>
-    </div>
-    <div class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 text-right transition-transform duration-700 ease-out quadrant-content">
-      <span class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex justify-end items-center gap-3">
-        Sistemas &amp; para médicos
-        <span class="w-8 h-[1px] bg-white/40"></span>
-      </span>
-      <h2 class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white tracking-tightest leading-[0.9] uppercase quadrant-title">
-        Planner<br/>Doc
-      </h2>
-    </div>
-  </a>
-
-</main>
-
-<!-- Footer: Desktop fixed, Mobile hidden (nav is enough) -->
-<footer class="hidden md:flex fixed bottom-0 w-full z-40 flex-row justify-between items-center px-16 py-4 glass-footer font-label text-[9px] tracking-ultra-wide uppercase text-secondary">
-  <div class="flex gap-8">
-    <a class="hover:text-white transition-colors" href="/empresa#inquiries">Contato</a>
-    <a class="hover:text-white transition-colors" href="/empresa">Studio</a>
-    <a class="hover:text-white transition-colors" href="https://www.linkedin.com/in/brunogprates" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </div>
-  <div class="flex items-center gap-3">
-    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-    <span>© 2026 PROINOV. Todos os direitos reservados.</span>
-  </div>
-  <a class="hover:text-white transition-colors" href="mailto:studio@proinov.com">studio@proinov.com</a>
-</footer>
 
-<!-- Structural border -->
-<div class="fixed inset-0 pointer-events-none border-[1px] border-white/10 z-[60]"></div>
+  <!-- DESKTOP: 2x2 grid layout -->
+  <main class="hidden md:grid grid-cols-2 grid-rows-2 h-screen w-screen overflow-hidden">
 
-<script>
-  // Mobile menu
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuClose = document.getElementById('menu-close');
-  const mobileMenu = document.getElementById('mobile-menu');
+    <!-- Q1: Proinov Empresa -->
+    <a href="/empresa" class="relative group cursor-pointer overflow-hidden quadrant-container block">
+      <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
+        <img alt="Proinov Empresa"
+          class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000"
+          src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80" />
+        <div class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition-colors duration-700 quadrant-scrim">
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 transition-transform duration-700 ease-out quadrant-content">
+        <span
+          class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex items-center gap-3">
+          <span class="w-8 h-[1px] bg-white/40"></span>
+          Studio &amp; Estratégia
+        </span>
+        <h2
+          class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white/50 tracking-tightest leading-[0.9] uppercase italic quadrant-title">
+          Projetos<br />Tecnologia
+        </h2>
+      </div>
+    </a>
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.remove('hidden');
-    mobileMenu.classList.add('flex');
-  });
-  menuClose.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    mobileMenu.classList.remove('flex');
-  });
+    <!-- Q2: Bruno Prates -->
+    <a href="https://www.linkedin.com/in/brunogprates/" target="_blank" rel="noopener noreferrer"
+      class="relative group cursor-pointer overflow-hidden quadrant-container block">
+      <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
+        <img alt="Bruno Prates"
+          class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
+          src="assets/img/img02.png" />
+        <div class="absolute inset-0 bg-black/55 group-hover:bg-black/25 transition-colors duration-700 quadrant-scrim">
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 text-right transition-transform duration-700 ease-out quadrant-content">
+        <span
+          class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex justify-end items-center gap-3">
+          Identidade Pessoal
+          <span class="w-8 h-[1px] bg-white/40"></span>
+        </span>
+        <h2
+          class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white/50 tracking-tightest leading-[0.9] uppercase quadrant-title">
+          Bruno<br />Prates
+        </h2>
+      </div>
+    </a>
 
-  // Scroll dots indicator (mobile)
-  const scrollContainer = document.getElementById('mobile-scroll');
-  const dots = document.querySelectorAll('.dot');
+    <!-- Q3: Radius -->
+    <a href="/radius" class="relative group cursor-pointer overflow-hidden quadrant-container block">
+      <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
+        <img alt="Radius"
+          class="w-full h-full object-cover grayscale-[0.4] group-hover:grayscale-0 transition-all duration-1000"
+          src="radius/Digital_Twin_Journey/bgimpact00.jpg" />
+        <div class="absolute inset-0 bg-black/60 group-hover:bg-black/30 transition-colors duration-700 quadrant-scrim">
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 transition-transform duration-700 ease-out quadrant-content">
+        <span
+          class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex items-center gap-3">
+          <span class="w-8 h-[1px] bg-white/40"></span>
+          Digital 3D · ConstruTech
+        </span>
+        <h2
+          class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white/50 tracking-tightest leading-[0.9] uppercase italic quadrant-title">
+          Radius
+        </h2>
+      </div>
+    </a>
 
-  if (scrollContainer && dots.length) {
-    scrollContainer.addEventListener('scroll', () => {
-      const index = Math.round(scrollContainer.scrollTop / scrollContainer.clientHeight);
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-white', i === index);
-        dot.classList.toggle('bg-white/30', i !== index);
-      });
-    }, { passive: true });
-  }
-</script>
+    <!-- Q4: PlannerDoc -->
+    <a href="https://plannerdoc.com.br/" target="_blank" rel="noopener noreferrer"
+      class="relative group cursor-pointer overflow-hidden quadrant-container block">
+      <div class="absolute inset-0 transition-transform duration-[2000ms] ease-out quadrant-image">
+        <img alt="PlannerDoc"
+          class="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-1000"
+          src="assets/img/img04.png" />
+        <div class="absolute inset-0 bg-black/55 group-hover:bg-black/25 transition-colors duration-700 quadrant-scrim">
+        </div>
+      </div>
+      <div
+        class="absolute inset-x-16 bottom-16 lg:bottom-20 z-10 text-right transition-transform duration-700 ease-out quadrant-content">
+        <span
+          class="block font-label text-[10px] tracking-ultra-wide uppercase text-white/60 mb-4 flex justify-end items-center gap-3">
+          Sistemas &amp; para médicos
+          <span class="w-8 h-[1px] bg-white/40"></span>
+        </span>
+        <h2
+          class="font-headline font-black text-5xl lg:text-7xl xl:text-8xl text-white/50 tracking-tightest leading-[0.9] uppercase quadrant-title">
+          Planner<br />Doc
+        </h2>
+      </div>
+    </a>
+
+  </main>
+
+  <!-- Footer: Desktop fixed, Mobile hidden (nav is enough) -->
+  <footer
+    class="hidden md:flex fixed bottom-0 w-full z-40 flex-row justify-between items-center px-16 py-4 glass-footer font-label text-[9px] tracking-ultra-wide uppercase text-secondary">
+    <div class="flex gap-8">
+      <a class="hover:text-white transition-colors" href="/empresa#inquiries">Contato</a>
+      <a class="hover:text-white transition-colors" href="/empresa">Studio</a>
+      <a class="hover:text-white transition-colors" href="https://www.linkedin.com/in/brunogprates" target="_blank"
+        rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      <span>© 2026 PROINOV. Todos os direitos reservados.</span>
+    </div>
+    <a class="hover:text-white transition-colors" href="mailto:studio@proinov.com">studio@proinov.com</a>
+  </footer>
+
+  <!-- Structural border -->
+  <div class="fixed inset-0 pointer-events-none border-[1px] border-white/10 z-[60]"></div>
+
+  <script>
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex');
+    });
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+    });
+
+    // Scroll dots indicator (mobile)
+    const scrollContainer = document.getElementById('mobile-scroll');
+    const dots = document.querySelectorAll('.dot');
+
+    if (scrollContainer && dots.length) {
+      scrollContainer.addEventListener('scroll', () => {
+        const index = Math.round(scrollContainer.scrollTop / scrollContainer.clientHeight);
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('bg-white', i === index);
+          dot.classList.toggle('bg-white/30', i !== index);
+        });
+      }, { passive: true });
+    }
+  </script>
 </body>
+
 </html>
